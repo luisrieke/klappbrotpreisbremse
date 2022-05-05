@@ -2072,9 +2072,9 @@ button,
   cursor: pointer;
   display: inline-block;
   font-weight: 300;
-  height: 2.85rem;
-  line-height: 2.95rem;
-  padding: 0 1.5rem;
+  height: 3.85rem;
+  line-height: 3.95rem;
+  padding: 0 2.5rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -3288,7 +3288,7 @@ body:after {
 .linkpetition {
   font-size: 48px;
   text-decoration-line: underline;
-  color: #085442;
+  color: #210000;
 }
 
 /* Footer */
@@ -3317,5 +3317,20 @@ body:after {
 @media screen and (max-width: 736px) {
   #footer {
     padding: 1rem 0 0.1rem 0;
+  }
+}
+
+/* Textblock */
+
+#h3top {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 2rem 0;
+  padding: 4rem 0 4rem;
+}
+
+@media screen and (min-width: 736px) {
+  #h3top {
+    padding: 4rem;
   }
 }
