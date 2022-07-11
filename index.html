@@ -6,60 +6,94 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="./images/sticker.png">
 </head>
 
 <body>
 
-	<!-- Header -->
-	<header id="header">
-		<img src="images/sticker.png" alt="Logo" style="max-width: 500px;">
-		<br>
-		<br>
-		<br>
-	</header>
+	<!-- Scripts -->
+	<script id="vertexShader" type="x-shader/x-vertex">
 
-	<!-- Main -->
-	<section id="main">
-		<div class="inner">
+		// Uniforms
+		uniform float time;
+		varying vec3 vNormal;
+		      
+		void main(void) {
+		   vec3 v = position;
+		   vNormal = normal;
+		   v.z += sin(2.0 * position.x + (time)) * 925.5;
+			
+		   gl_Position = projectionMatrix *
+		                modelViewMatrix *
+		                vec4(v, 0.9);
+		}
+		
+				</script>
 
-			<!-- One -->
-			<section id="one" class="wrapper style1">
 
+	<script id="fragmentShader" type="x-shader/x-fragment">
+		varying vec3 vNormal;
+		uniform float time;
+		      
+		void main(void) {
+		    vec3 light = vec3(0.3, .9, .1);
+		
+		    light = normalize(light);
+		
+		    float dProd = max(0.2, dot(vNormal, light));
+		
+		    gl_FragColor = vec4(0, // R
+		                      84, // G
+		                      25, // B
+		                      1.0);  // A
+		}
+		
+				</script>
 
-				<header class="special">
-					<h2>Klappbrotpreisbremse</h2>
-					<h3 id="h3top">Diese Petition bezieht sich auf die Klappbrotproblematik.
-						Im Volksmund auch gerne als
-						Faltbrot, Kebab oder Döner
-						bezeichnet. Weitere Informationen dazu auf der Petitionsseite.</h3>
-					<a href="https://www.change.org/p/klappbrotpreisbremse" target="_blank" class="button">
-						jetzt unterschreiben
-					</a>
-				</header>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.min.js'></script>
+	<script src="./assets/js/stars.js"></script>
 
-				<div class="image fit flush">
-					<img src="images/doner.jpg" alt="" />
-				</div>
+	<div id="content">
 
-		</div>
-	</section>
+		<!-- Header -->
+		<header id="header">
+			<img src="images/sticker.png" class="logo" alt="Logo">
+			<br>
+			<br>
+		</header>
 
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="copyright">
-			<h2>by <a href="https://spacifik.de">Spacifik</a></h3>
+		<!-- Main -->
+		<section id="main">
+			<div class="inner">
+
+				<!-- Text -->
+				<section id="one" class="wrapper style1">
+
+					<header class="special">
+						<h1>Klappbrotpreisbremse</h1>
+						<h3 id="h3top">Diese Petition bezieht sich auf die Klappbrotproblematik.
+							Im Volksmund auch gerne als
+							Faltbrot, Kebab oder Döner
+							bezeichnet. Weitere Informationen dazu auf der Petitionsseite.</h3>
+						<a href="https://www.change.org/p/klappbrotpreisbremse" target="_blank" class="button">
+							Zur Petitionsseite
+						</a>
+					</header>
+
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="copyright">
+				<h4>by <a href="https://spacifik.de">Spacifik</a></h4>
 				<br />
 				<a href="https://spacifik.de/impressum">Impressum</a> · <a
 					href="https://spacifik.de/datenschutzerklaerung">Datenschutzerklärung</a>
-		</div>
-	</footer>
+			</div>
+		</footer>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.poptrox.min.js"></script>
-	<script src="assets/js/skel.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	</div>
 
 </body>
 
