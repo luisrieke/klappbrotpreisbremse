@@ -128,14 +128,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  width: fit-content;
 }
 
 /* Typo */
 
 html {
   font-size: 13pt;
-  min-width: fit-content;
 }
 
 @media screen and (max-width: 1680px) {
@@ -794,7 +792,7 @@ header p {
 /* Main */
 
 #content {
-  min-width: fit-content;
+  margin-left: -10%;
   position: absolute;
   min-width: 380px;
   text-align: center;
