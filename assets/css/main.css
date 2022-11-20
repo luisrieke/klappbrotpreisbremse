@@ -493,6 +493,17 @@ button.special:active,
   background-color: #4b924b;
 }
 
+/* Flag */
+
+#flag {
+  color: #f298ed;
+  font-size: large;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 40px;
+}
+
 /* Form */
 
 form {
