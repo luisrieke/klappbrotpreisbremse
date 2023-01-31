@@ -423,7 +423,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-  background-color: white;
+  background-color: #ffe561;
 }
 
 input[type="submit"]:active,
@@ -431,7 +431,7 @@ input[type="reset"]:active,
 input[type="button"]:active,
 button:active,
 .button:active {
-  background-color: #e5e5e5;
+  background-color: #ffe666;
 }
 
 input[type="submit"].alt,
@@ -921,8 +921,12 @@ header p {
   text-align: center;
 }
 
-#footer a {
+#footer .copyright a {
   color: rgba(255, 255, 255, 0.75);
+}
+
+#footer .imprint a {
+  color: rgba(255, 255, 255, 0.225);
 }
 
 #footer a:hover {
