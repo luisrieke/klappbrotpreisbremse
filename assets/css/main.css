@@ -229,7 +229,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5;
   margin: 0 0 1rem 0;
 }
@@ -250,7 +250,7 @@ h1 {
 
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -307,7 +307,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #f298ed;
+  color: #fad000dd;
 }
 
 /* Button */
@@ -414,7 +414,7 @@ input[type="reset"],
 input[type="button"],
 button,
 .button {
-  background-color: #f2f2f2;
+  background-color: #facf00;
   color: #000 !important;
 }
 
@@ -496,7 +496,7 @@ button.special:active,
 /* Flag */
 
 #flag {
-  color: #f298ed;
+  color: #fad00092;
   font-size: large;
   position: absolute;
   top: 0;
@@ -803,9 +803,7 @@ header p {
 /* Main */
 
 #content {
-  margin-left: -7%;
   position: absolute;
-  min-width: 380px;
   text-align: center;
   top: 80px;
   z-index: 1;
@@ -850,12 +848,6 @@ header p {
   font-size: 0.8rem;
   letter-spacing: 0.25rem;
   margin: 0;
-}
-
-@media screen and (max-width: 980px) {
-  .wrapper > header.special {
-    padding: 3rem 2rem;
-  }
 }
 
 @media screen and (max-width: 736px) {
