@@ -1,3 +1,20 @@
+/* Basic */
+
+@font-face {
+  font-family: "heading_font_bold";
+  src: url("../fonts/Roboto_Mono/static/RobotoMono-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "heading_font_regular";
+  src: url("../fonts/Roboto_Mono/static/RobotoMono-Regular.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter/Inter-Regular.woff") format("woff"),
@@ -52,7 +69,7 @@ body,
 input,
 select,
 textarea {
-  font-family: "Inter", Fallback, sans-serif;
+  font-family: "heading_font_regular", monospace;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.65;
@@ -111,6 +128,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "heading_font_bold", monospace;
   font-weight: 400;
   line-height: 1.5;
   margin: 0 0 1rem 0;
@@ -132,7 +150,8 @@ h1 {
 
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 22px;
+    font-size: 16px;
+    text-decoration: underline;
   }
 }
 
@@ -186,10 +205,13 @@ b {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
   color: #fad000dd;
+}
+
+h4 {
+  color: #312900;
 }
 
 /* Button */
@@ -782,24 +804,16 @@ header p {
 }
 
 #footer .copyright a {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(72, 72, 72, 0.75);
 }
 
 #footer .imprint a {
-  color: rgba(255, 255, 255, 0.225);
+  color: rgba(255, 255, 255, 0.106);
   padding-bottom: 48px;
 }
 
 #footer a:hover {
-  color: #fff;
-}
-
-#footer .copyright {
-  color: #bbb;
-  font-size: 0.9rem;
-  margin: 0 0 2rem 0;
-  padding: 0 1rem;
-  text-align: center;
+  color: #242424;
 }
 
 @media screen and (max-width: 736px) {
